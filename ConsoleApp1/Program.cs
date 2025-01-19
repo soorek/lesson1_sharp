@@ -47,3 +47,6 @@ string xString;
 xString = Console.ReadLine();
 Console.WriteLine(xDouble + " - ваше значение.");
 
+
+// Бла бла бла, раз два три, 4 5, это очень важный комментарий для нашей работы
+
