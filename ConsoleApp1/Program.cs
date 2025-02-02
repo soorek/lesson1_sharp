@@ -54,26 +54,95 @@ void DataType()
 
     // Бла бла бла, раз два три, 4 5, это очень важный комментарий для нашей работы
 }
-
-
-
-while (true)
+void Condition()
 {
-    Console.WriteLine("Введите свой баланс: ");
 
-    int amountOfMoney = Int32.Parse(Console.ReadLine());
 
-    if (amountOfMoney >= 2000)
+
+
+
+    while (true)
     {
-        Console.WriteLine("Я богат, куплю два доширака вместо одного");
+        Console.WriteLine("Введите свой баланс: ");
+
+        int amountOfMoney = Int32.Parse(Console.ReadLine());
+
+        if (amountOfMoney >= 2000)
+        {
+            Console.WriteLine("Я богат, куплю два доширака вместо одного");
+        }
+        else if (amountOfMoney > 0)
+        {
+            Console.WriteLine("Деньги есть, но не хватает, пройду мимо магазина");
+        }
+        else
+        {
+            Console.WriteLine("Денег нет, продам Сережу за доширак");
+        }
     }
-    else if (amountOfMoney > 0)
-    {
-        Console.WriteLine("Деньги есть, но не хватает, пройду мимо магазина");
-    }
-    else
-    {
-        Console.WriteLine("Денег нет, продам Сережу за доширак");
-    }
+
 }
 
+
+
+
+
+
+int i = 0;
+
+
+// Цикл с предусловием
+while(i < 5)
+{
+    Console.WriteLine(i);
+    i++;
+}
+
+// Цикл с постусловием
+i = 0;
+do
+{
+    i++;
+    Console.WriteLine(i);
+} while (i<0);
+
+// Цикл for
+
+for (i = 0; i <= 52; i++)
+{
+    Console.WriteLine(i);
+}
+
+
+int mnojitel = 5;
+for (i = 0; i < 11; i++)
+{
+    Console.WriteLine(mnojitel + " * " + i +
+        " = " + i*mnojitel);
+}
+
+// определение массива
+
+int[] numbers;
+int[] numbers_1 = new int[10];
+int[] numbers_2 = new int[5] { 1, 5, 23, -4, 10 };
+int[] numbers_3 = {1, 24, 3, -8 };
+
+// определенние n-мерных массивов
+
+int[,] matrix = new int[3, 3] { { 1, 2, 3}, { 4, 5, 6 }, { 7, 8, 9} };
+
+
+foreach (int a in numbers_2)
+{
+    Console.WriteLine(a);
+}
+
+for (int b = 0; b < numbers_2.Length; b++)
+{
+    Console.WriteLine(b);
+    Console.WriteLine(numbers_2[b]);
+
+    Console.WriteLine("В ячейке под номером" + b 
+        + "хранится значение" + numbers_2[b]);
+}
