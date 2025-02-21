@@ -1,6 +1,8 @@
 ﻿
 
 
+using System.Diagnostics.Tracing;
+
 internal class Program
 {
     private static void Main(string[] args)
@@ -145,43 +147,78 @@ internal class Program
 
         }
 
-        
-
-
-        int getSquare(int x, int y)
+        int Methods();
         {
-            int z = x + y;
 
-            return x * y;
-
-        }
-
-        double getKVADRAT(double x)
-        {
-            var result = x * x;
-            return result;
-        }
-
-        
-        Console.WriteLine(getKVADRAT(100346));
-
-        var max = Int32.MaxValue;
-        var min = Int32.MinValue;
-
-        Console.WriteLine(max + " " + min);
-
-        int getFactorial(int number)
-        {
-            var result = 1;
-
-            for (int i = 0; i <=number; i++)
+            int getSquare(int x, int y)
             {
-                result *= i;
+                int z = x + y;
+
+                return x * y;
+
             }
+
+            double getKVADRAT(double x)
+            {
+                var result = x * x;
                 return result;
+            }
+
+
+            int getFactorial(int number)
+            {
+                var result = 1;
+
+                for (int i = 1; i <= number; i++)
+                {
+                    result *= i;
+                }
+                return result;
+            }
+
+
+            long square(long a, long b)
+            {
+                long result;
+                result = a * b;
+                return result;
+            }
+
+
+            Console.WriteLine(square(10, 15));
+
+            long square_result = square(12, 5);
+
+
+
+            var max = Int32.MaxValue;
+            var min = Int32.MinValue;
+
+            Console.WriteLine(min + "\n" + max);
+
+
+            Console.WriteLine(square(191912919, 123123123));
+
+            return square_result;
+
         }
 
-        Console.WriteLine(getFactorial(4));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
     
