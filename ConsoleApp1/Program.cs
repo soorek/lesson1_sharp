@@ -5,6 +5,23 @@ using System.Diagnostics.Tracing;
 
 internal class Program
 {
+    
+    class Person()
+    {
+        public double height;
+        public int age;
+        public string name;
+
+        public void speak()
+        {
+            Console.WriteLine($"Меня зовут - {name}, мне {age} лет");
+        }
+
+    }
+    
+   
+
+
     private static void Main(string[] args)
     {
         void DataType()
@@ -147,78 +164,58 @@ internal class Program
 
         }
 
-        int Methods();
+
+        int getSquare(int x, int y)
         {
+            int z = x + y;
 
-            int getSquare(int x, int y)
+            return x * y;
+
+        }
+        double getKVADRAT(double x)
+        {
+            var result = x * x;
+            return result;
+        }
+        int getFactorial(int number)
+        {
+            var result = 1;
+
+            for (int i = 1; i <= number; i++)
             {
-                int z = x + y;
-
-                return x * y;
-
+                result *= i;
             }
-
-            double getKVADRAT(double x)
-            {
-                var result = x * x;
-                return result;
-            }
-
-
-            int getFactorial(int number)
-            {
-                var result = 1;
-
-                for (int i = 1; i <= number; i++)
-                {
-                    result *= i;
-                }
-                return result;
-            }
-
-
-            long square(long a, long b)
-            {
-                long result;
-                result = a * b;
-                return result;
-            }
-
-
-            Console.WriteLine(square(10, 15));
-
-            long square_result = square(12, 5);
-
-
-
-            var max = Int32.MaxValue;
-            var min = Int32.MinValue;
-
-            Console.WriteLine(min + "\n" + max);
-
-
-            Console.WriteLine(square(191912919, 123123123));
-
-            return square_result;
-
+            return result;
+        }
+        long square(long a, long b)
+        {
+            long result;
+            result = a * b;
+            return result;
         }
 
 
 
+        Person maxim = new Person();
 
+        maxim.age = 9;
+        maxim.name = "Максим";
 
+        maxim.speak();
 
+        Person petechka = new Person();
 
+        petechka.age = 12;
+        petechka.name = "Vasya";
 
-
-
-
-
-
-
+        petechka.speak();
 
 
 
     }
+    
+
+
+ 
 }
     
